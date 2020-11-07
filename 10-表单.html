@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="#" enctype="multipart/form-data">
+    <fieldset>
+      <legend>张三</legend>
+      <input type="text" name="txt" value="zhangsan" readonly>
+      <input type="text" name="username" pattern="([a-z]|[0-9]){6,20}">
+      <input type="text" value="lisi" disabled>
+      <!-- <hr> -->
+      <!-- 隐藏表单 -->
+      <input type="hidden" name="">
+      <hr>
+      <select name="category">
+        <optgroup label="新闻">
+          <option value="1">新闻</option>
+          <option value="2">游戏</option>
+        </optgroup>
+        <optgroup label="开发">
+          <option value="1">MySql</option>
+          <option value="2">Linux</option>
+        </optgroup>
+      </select>
+      <hr>
+      <!-- 单选 -->
+      <label>
+        <input type="radio" name="sex" id="boy" value="boy">男
+      </label>
+      <label>
+        <input type="radio" checked name="sex" id="girl" value="girl">女
+      </label>
+      <hr>
+      <label>
+        <input type="checkbox" name="registertype" id="email" value="email">邮箱
+      </label>
+      <label>
+        <input type="checkbox" name="registertype" id="mobile" value="mobile">手机
+      </label>
+      <hr>
+      <!-- 文件上传 -->
+      <!-- multiple可以上传多个文件 -->
+      <!-- accept限制上传文件类型 image/png限制只允许上传png图片,也可以使用扩展名限制 -->
+      <!-- <input type="file" name="images" id="iamges" multiple accept="image/png"> -->
+      <input type="file" name="images" id="iamges" multiple accept=".png,.jpg">
+      <hr>
+      <!-- date表单 month week min指定最小  max指定最大 step指定步长 -->
+      <input type="week" name="date" >
+      <hr>
+      <!-- time表单 datetime-local datetime -->
+      <input type="time" name="" id="">
+      <hr>
+      <!-- datalist -->
+      <input type="search" name="search" list="lesson">
+      <datalist id="lesson">
+        <!-- 如果不想要提示只需要将option变成单标签 -->
+        <option value="mysql" />
+        <option value="node">高效后天语言</option>
+        <option value="css">美化网页样式</option>
+      </datalist>
+      <!-- autocomplete 关闭开启历史数据提示 -->
+      <input type="text" name="li" autocomplete="off">
+    </fieldset>
+    <button type="submit">提交</button>
+  </form>
+</body>
+
+</html>
