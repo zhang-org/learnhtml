@@ -11,14 +11,18 @@
   <form action="#" enctype="multipart/form-data">
     <fieldset>
       <legend>张三</legend>
+      <!-- readonly设置只读 -->
       <input type="text" name="txt" value="zhangsan" readonly>
+      <!-- pattern 设置匹配正则 -->
       <input type="text" name="username" pattern="([a-z]|[0-9]){6,20}">
+      <!-- disabled 禁用 -->
       <input type="text" value="lisi" disabled>
       <!-- <hr> -->
       <!-- 隐藏表单 -->
       <input type="hidden" name="">
       <hr>
       <select name="category">
+        <!-- optgroup 定义下拉列表组 -->
         <optgroup label="新闻">
           <option value="1">新闻</option>
           <option value="2">游戏</option>
